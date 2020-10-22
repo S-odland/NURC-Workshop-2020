@@ -11,7 +11,8 @@ void setup()
   pinMode(onBoardLED, OUTPUT); // make red led an ouput indicator for accelerometer movement
   pinMode(motionSensePin, INPUT);
   Serial.begin(9600); // Serial baud rate of 9600
-  SerialBT.begin("MotionSense"); // begins bluetooth for esp named MotionSense
+  SerialBT.begin("MotionSense"); // begins bluetooth for esp named MotionSense -- allowing you 
+  // to pair with your computer
 }
 
 void loop()

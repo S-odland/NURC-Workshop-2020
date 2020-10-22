@@ -14,7 +14,7 @@ void setup()
 void loop()
 {
   int motionSense;
-  motionSense = analogRead(motionSensePin);
+  motionSense = analogRead(motionSensePin); // reading the value of the phototransistor
 
   if (motionSense < 50){ // threshold value to detect an "intruder"
     digitalWrite(onBoardLED, HIGH); // light goes on if "intruder" is detected
