@@ -4,4 +4,4 @@
 https://docs.google.com/document/d/1KCa4SJloqJHVxPxc_FG7KW-98g1RP6R0fKyE6siXFbg/edit?usp=sharing
 
 * The introductory content is shown on the google doc
-* The content specific to the Motion Sensor project is shown here in the Wiki
+* The content specific to the Motion Sensor project is shown [here](https://github.com/S-odland/NURC-Workshop-2020/wiki) in the Wiki
