@@ -4,12 +4,15 @@
 BluetoothSerial SerialBT; //defining an instance of BluetoothSerial to be SerialBT
 
 const int motionSensePin = A4; // phototransistor on pin A4 of the Huzzah
-const int onBoardLED = 13; // built in LED on the esp32 HUZZAH
+const int dotLed = 21 // Dot LED pointed at phototransistor
+const int rLed = 14; // red LED to indicate motion sense
  
 void setup()
 {
-  pinMode(onBoardLED, OUTPUT); // make red led an ouput indicator for accelerometer movement
+  pinMode(rLed, OUTPUT); // make red led an ouput indicator motion sense
+  pinMode(dotLed,OUTPUT); // dot led pointed at phototransistor an output
   pinMode(motionSensePin, INPUT);
+  digitalWrite(dotLED,HIGH); // Turning on dotLed
   Serial.begin(9600); // Serial baud rate of 9600
   SerialBT.begin("MotionSense"); // begins bluetooth for esp named MotionSense -- allowing you 
   // to pair with your computer
@@ -21,7 +24,7 @@ void loop()
   motionSense = analogRead(motionSensePin);
 
   if (motionSense < 50){ // threshold value to detect an "intruder"
-    digitalWrite(onBoardLED, HIGH); // light goes on if "intruder" is detected
+    digitalWrite(rLed, HIGH); // light goes on if "intruder" is detected
     SerialBT.println("INTRUDER");
   }
   delay(100);
