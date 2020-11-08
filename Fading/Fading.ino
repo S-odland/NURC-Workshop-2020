@@ -18,13 +18,9 @@ void setup() {
 
 void loop() {
 
-//   for (int i = 0; i <= 255; i+=5){
-//      ledcWrite(led_channel,i);    
-//   }
-
-  ledcWrite(led_channel,10);
-
-   delay(30);
-
+   for (int i = 0; i <= 255; i+=5){
+      ledcWrite(led_channel,i); 
+      delay(30);   
+   }
 
 }
