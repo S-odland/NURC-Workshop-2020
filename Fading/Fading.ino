@@ -1,4 +1,6 @@
 
+// esp32 pwm involves ledcwrite setup and attachpin 
+
 const int r_motor_channel = 7; // right motor PWM channel
 const int led_channel = 3;
 
@@ -19,8 +21,12 @@ void setup() {
 void loop() {
 
    for (int i = 0; i <= 255; i+=5){
-      ledcWrite(led_channel,i); 
-      delay(30);   
+    ledcWrite(led_channel,i); 
+    delay(30);   
+   }
+   for(int i = 255; i >= 0; i-=5){
+    ledcWrite(led_channel,i);
+    delay(30);
    }
 
 }
