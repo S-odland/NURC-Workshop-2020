@@ -3,7 +3,7 @@
 BluetoothSerial SerialBT;
 
 void setup() {
-  SerialBT.begin("MotionSense");
+  SerialBT.begin("MotionSense1");
   Serial.begin(9600);
 }
 
